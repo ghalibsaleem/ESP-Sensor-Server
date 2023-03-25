@@ -5,8 +5,8 @@
 #include "DevSensors.h"
 
 
-const char* ssid = "Haveli";
-const char* password = "WelcomeToHaveli";
+const char* ssid = "WIFI Name";
+const char* password = "Pass";
 
 
 

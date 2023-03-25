@@ -5,8 +5,8 @@
 #include "DevSensors.h"
 
 
-const char* ssid = "WIFI Name";
-const char* password = "Pass";
+const char* ssid = "WiFi Name";
+const char* password = "Password";
 
 
 
@@ -39,6 +39,7 @@ void setup() {
 	setupLuxSensorAuto();
 	setupDHTSensor();
 	
+	//Tester
 	server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
 	request->send_P(200, "text/plain", "33");
 	});

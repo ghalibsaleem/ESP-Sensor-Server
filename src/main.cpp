@@ -35,9 +35,6 @@ void setup() {
         return;
     }
 	Serial.println(WiFi.localIP());
-	setupSGP();
-	setupLuxSensorAuto();
-	setupDHTSensor();
 	
 	//Tester
 	server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
@@ -63,7 +60,7 @@ void setup() {
 		request->send(200, "application/json", currentStatus.airquality);
 	});
 	
-	server.begin();
+	//server.begin();
 	
 }
 
@@ -86,12 +83,7 @@ void loop() {
 		Serial.println(WiFi.localIP());
 	}
 	Serial.println("Getting Data:");
-	currentStatus.temperature = dht.readTemperature();
-	currentStatus.humidity = dht.readHumidity();
-	currentStatus.eco2 = getCO2();
-	currentStatus.tvoc = getTVOC();	
-	currentStatus.ambientlight = getLuxDataAuto();	
-	currentStatus.airquality = getAirQuality();
+	
 	delay(1000);
 }
 

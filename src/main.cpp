@@ -53,6 +53,9 @@ void setup() {
 	server.on("/eco2", HTTP_GET, [](AsyncWebServerRequest *request){
 		request->send_P(200, "text/plain", (String(currentStatus.eco2)).c_str());
 	});
+	server.on("/co", HTTP_GET, [](AsyncWebServerRequest *request){
+		request->send_P(200, "text/plain", "5");
+	});
 	server.on("/ambientlight", HTTP_GET, [](AsyncWebServerRequest *request){
 		request->send_P(200, "text/plain", (String(currentStatus.ambientlight)).c_str());
 	});

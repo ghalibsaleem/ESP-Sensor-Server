@@ -17,11 +17,11 @@
 DHT dht(DHTPIN, DHTTYPE);
 
 struct SensorStatus {   
-  float temperature;           
-  float humidity;     
-  float eco2;  
-  float tvoc;
-  float ambientlight;
+  float temperature = 10;           
+  float humidity = 10;     
+  float eco2 = 10;  
+  float tvoc = 10;
+  float ambientlight = 10;
   String airquality;
 } currentStatus;
 
